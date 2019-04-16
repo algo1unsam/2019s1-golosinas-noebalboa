@@ -18,15 +18,35 @@ object alfajor {
 }
 
 object caramelo {
-	// definir
+	var property peso = 5
+	
+	method precio() = 1
+	method gusto() = frutilla
+	method librGluten() = true
+	method mordisco() { peso -= 1 }
 }
 
 object chupetin {
-	// definir
+	var property peso = 7
+	
+	method precio() = 2
+	method gusto() = naranja
+	method libreGluten() = true
+	method mordisco(){ 
+		if (peso >= 2) { peso = peso * 0.9 }
+	}
 }
 
 object oblea {
-	// definir
+	var property peso = 250
+	
+	method precio() = 5
+	method gusto() = vainilla
+	method libreGluten() = false
+	method mordisco() { 
+		if (peso > 70) peso *= 0.5 
+		else peso *= 0.75
+	}
 }
 
 object chocolatin {

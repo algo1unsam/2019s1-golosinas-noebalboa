@@ -9,16 +9,18 @@ object mariano {
 	
 	method probarGolosinas() { golosinas.forEach{golosina => golosina.mordisco()}}
 	
-	method hayGolosinaSinTACC() { golosinas.any{golosina => golosina.libreGluten()} }
+	method hayGolosinaSinTACC() { return golosinas.any{golosina => golosina.libreGluten()} }
 	
-//	method preciosCuidados() { golosinas.all{golosina => golosina.precio() <= 10} }
+	method preciosCuidados() { return golosinas.all{golosina => golosina.precio() <= 10} }
 	
-//	method golosinaDeSabor(unSabor) { golosinas.find{ golosinas.gusto(unSabor)} }
+	method golosinaDeSabor(unSabor) { return golosinas.find{golosina => golosinas.gusto() == unSabor} }
 	
-//	method golosinasDeSabor(unSabor) { golosinas.filter{return golosinas.gusto(unSabor)} }
+	method golosinasDeSabor(unSabor) { return golosinas.filter{golosina => golosinas.gusto() == unSabor} }
 	
-//	method golosinaMasCara() { return golosinas.max({golosina => golosina.precio()}) }
+	method sabores() { return golosinas.map{golosina => golosinas.gusto()}.asSet() }
 	
-//	method pesoGolosinas() { golosinas.sum()}
+	method golosinaMasCara() { return golosinas.max{golosina => golosina.precio()} }
+	
+	method pesoGolosinas() { return golosinas.sum{golosina => golosina.peso()} }
 }
 
