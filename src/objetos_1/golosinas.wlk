@@ -61,7 +61,7 @@ object golosinaBaniada {
 
 object tuttifrutti {
 	var peso = 5
-	var property libreGluten 
+	var property libreGluten = false
 	var gusto = frutilla
 	
 	method peso() = peso
@@ -82,7 +82,6 @@ object frutilla{
 
 object chocolate{
 	method siguiente() = naranja
-	}
 }
 
 object naranja {
